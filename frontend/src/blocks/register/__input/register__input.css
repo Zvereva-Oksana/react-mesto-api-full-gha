@@ -1,0 +1,29 @@
+.register__input {
+    border: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #CCC;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 0 10px;
+    margin-bottom: 30px;
+    color: #FFF;
+}
+
+.register__input::placeholder {
+    color: #CCC;
+    opacity: 1;
+    font-weight: 400;
+}
+
+.register__input::-webkit-input-placeholder {
+    color: #CCC;
+    font-weight: 400;
+}
+.register__input::-moz-placeholder {
+    color: #CCC;
+    font-weight: 400;
+}

@@ -1,0 +1,6 @@
+.container__line {
+    width: 24px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 6px 0;
+}

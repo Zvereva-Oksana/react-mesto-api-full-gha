@@ -1,0 +1,17 @@
+.register__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #CCCCCC;
+}
+
+@media screen and (max-width: 410px) {
+    .register__form {
+        padding-top: 40px;
+    }
+}
