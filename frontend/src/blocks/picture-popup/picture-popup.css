@@ -1,0 +1,6 @@
+.picture-popup.popup_opened {
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+}

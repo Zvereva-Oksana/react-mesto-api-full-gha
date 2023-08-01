@@ -1,0 +1,16 @@
+.card__vector {
+    cursor: pointer;
+    background-image: url('../../../images/Vector_like.svg');
+    background-size: 22px 19px;
+    display: inline-block;
+    width: 22px;
+    height: 19px;
+    content: "";
+    background-repeat: no-repeat;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card__vector:hover {
+    opacity: 0.5;
+}

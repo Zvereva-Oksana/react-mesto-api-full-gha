@@ -1,0 +1,8 @@
+.card__wrapper {
+    margin: 22px 20px;
+    width: calc(282px - 2*20px);
+    display: flex;
+    align-items: center;
+    border: none;
+    justify-content: space-between;
+}

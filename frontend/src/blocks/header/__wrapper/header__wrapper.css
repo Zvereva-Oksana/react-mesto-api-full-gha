@@ -1,0 +1,10 @@
+.header__wrapper {
+    display: flex;
+    column-gap: 24px;
+}
+
+@media screen and (max-width: 930px) {
+    .header__wrapper {
+       padding-right: 30px;
+    }
+}

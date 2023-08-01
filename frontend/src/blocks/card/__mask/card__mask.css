@@ -1,0 +1,9 @@
+.card__mask {
+    height: 282px;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-style: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+

@@ -1,0 +1,13 @@
+.register {
+    display: flex;
+    justify-content: center;
+    max-width: 880px;
+    margin-right: 0;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 410px) {
+    .register {
+        padding-top: 0;
+    }
+}
