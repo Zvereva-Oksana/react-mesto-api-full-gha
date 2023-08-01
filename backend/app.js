@@ -11,7 +11,7 @@ const NotFoundError = require('./errors/not-found-err');
 const errorHandler = require('./middlewares/error-handler');
 const { signinValidation, signupValidation } = require('./middlewares/validation');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-console.log('for check')
+
 const { PORT = 3000 } = process.env;
 
 const app = express();
