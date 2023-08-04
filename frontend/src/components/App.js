@@ -53,7 +53,7 @@ const App = () => {
                 if (!data) {
                     return
                 }
-                setEmail(data.data.email)
+                setEmail(data.email)
                 setLoggedIn(true);
                 navigate('/')
             })
@@ -68,7 +68,7 @@ const App = () => {
     }, [])
 
     const handleCardLike = (card) => {
-        const isLiked = card.likes.some((elem) => elem['_id'] === currentUser['_id']);
+        const isLiked = card.likes.includes(currentUser['_id']);
         const request = !isLiked ? api.addLikeCard(card['_id']) : api.deleteLikeCard(card['_id']);
         request.then((item) => {
             setCards((cards) => cards.map((elem) => elem['_id'] === card['_id'] ? item : elem));

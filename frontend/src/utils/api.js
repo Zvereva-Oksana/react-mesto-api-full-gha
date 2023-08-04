@@ -83,9 +83,9 @@ class Api {
 }
 
 export const api = new Api({
-    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-65',
+    baseUrl: 'https://api.mesto.zvereva.nomoreparties.co',
     headers: {
-        authorization: '7ff098a0-f867-4f2f-af72-c15adfdb3347',
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
         'Content-Type': 'application/json'
     }
 });

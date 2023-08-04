@@ -1,7 +1,7 @@
 const allowedCors = [
   'https://mesto.zvereva.nomoreparties.co',
   'http://mesto.zvereva.nomoreparties.co',
-  'localhost:3000'
+  'http://localhost:3000',
 ];
 
 module.exports = (req, res, next) => {
