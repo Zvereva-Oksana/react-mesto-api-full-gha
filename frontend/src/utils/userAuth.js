@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://api.mesto.zvereva.nomoreparties.co';
 
 export const register = (password, email) => {
     return fetch(`${BASE_URL}/signup`, {
@@ -20,15 +20,14 @@ export const authorize = (password, email) => {
         body: JSON.stringify({password, email})
     })
         .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`))
-    // console.log(res)
 };
 
-export const getContent = (JWT) => {
+export const getContent = (jwt) => {
     return fetch(`${BASE_URL}/users/me`, {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${JWT}`
+            "Authorization": `Bearer ${jwt}`
         },
     })
         .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`))

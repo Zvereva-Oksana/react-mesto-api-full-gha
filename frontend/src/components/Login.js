@@ -5,9 +5,9 @@ import FormRegisterAndLogin from "./FormRegisterAndLogin";
 const Login = ({onLogin, addInfoTooltipFalse, email, password, setEmail, setPassword, navigate}) => {
     const handleSubmitAuthorizeForm = (e) => {
         e.preventDefault();
-        userAuth.authorize(password, email).then(({token}) => {
+        userAuth.authorize(password, email).then(({jwt}) => {
             setEmail(email)
-            localStorage.setItem('jwt', token);
+            localStorage.setItem('jwt', jwt);
             onLogin();
             navigate('/');
         }).catch(() => {
