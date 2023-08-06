@@ -5,12 +5,13 @@
 <ul>
 <li>авторизации и регистрации пользователей</li>
 <li>операции с карточками и пользователями</li>
+</ul>
 
 Адрес репозитория: https://github.com/Zvereva-Oksana/react-mesto-api-full-gha
 
 ## Ссылки на проект
 
-IP-адрес 158.160.60.181
+IP 158.160.60.181
 
 Frontend https://mesto.zvereva.nomoreparties.co
 

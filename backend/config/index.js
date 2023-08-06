@@ -1,8 +1,8 @@
-const rateLimit = require("express-rate-limit");
+const rateLimit = require('express-rate-limit');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const jwtSecret = NODE_ENV === 'production' && JWT_SECRET ? JWT_SECRET : 'secret';
-console.log(jwtSecret, 'jwtSecret')
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -10,5 +10,5 @@ const limiter = rateLimit({
 });
 
 module.exports = {
-  jwtSecret, limiter
-}
+  jwtSecret, limiter,
+};
