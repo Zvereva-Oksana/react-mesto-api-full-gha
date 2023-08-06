@@ -11,9 +11,9 @@ const Header = ({email, onSignOut, isLoggedIn}) => {
             <div className='header__wrapper'>
                 {isLoggedIn && <p className='header__email'>{email}</p>}
                 {currentPath === '/' &&
-                <Link to="/sign-in" onClick={onSignOut} className="header__link header__link_color">Выйти</Link>}
-                {currentPath === '/sign-up' && <Link to="/sign-in" className="header__link">Войти</Link>}
-                {currentPath === '/sign-in' && <Link to="/sign-up" className="header__link">Регистрация</Link>}
+                <Link to="/signin" onClick={onSignOut} className="header__link header__link_color">Выйти</Link>}
+                {currentPath === '/signup' && <Link to="/signin" className="header__link">Войти</Link>}
+                {currentPath === '/signin' && <Link to="/signup" className="header__link">Регистрация</Link>}
             </div>
         </header>
     );

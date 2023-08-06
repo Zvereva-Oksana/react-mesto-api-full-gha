@@ -6,8 +6,8 @@ const Login = ({onLogin, addInfoTooltipFalse, email, password, setEmail, setPass
     const handleSubmitAuthorizeForm = (e) => {
         e.preventDefault();
         userAuth.authorize(password, email).then(({jwt}) => {
-            setEmail(email)
             localStorage.setItem('jwt', jwt);
+            setEmail(email)
             onLogin();
             navigate('/');
         }).catch(() => {

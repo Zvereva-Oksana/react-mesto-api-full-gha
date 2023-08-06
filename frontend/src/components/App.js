@@ -36,6 +36,7 @@ const App = () => {
 
     React.useEffect(() => {
         if (isLoggedIn) {
+            api.setToken(localStorage.getItem('jwt'));
             Promise.all([api.getUserInfo(), api.getInitialCards()]).then(
                 ([dataUser, dataCard]) => {
                     setCurrentUser(dataUser)
@@ -181,7 +182,7 @@ const App = () => {
                                                              cards={cards}
                                                              onCardLike={handleCardLike}
                                                              onCardDelete={handleCardDelete}/>}/>
-                    <Route path="/sign-up"
+                    <Route path="/signup"
                            element={<Register addInfoTooltipFalse={addInfoTooltipFalse}
                                               addInfoTooltipSucces={addInfoTooltipSucces}
                                               email={email}
@@ -189,7 +190,7 @@ const App = () => {
                                               password={password}
                                               setPassword={setPassword}
                                               navigate={navigate}/>}/>
-                    <Route path="/sign-in"
+                    <Route path="/signin"
                            element={<Login onLogin={() => setLoggedIn(true)}
                                            email={email}
                                            setEmail={setEmail}

@@ -12,7 +12,7 @@ const HeaderMobile = ({email, onSignOut}) => {
         <header className='header header_mobile'>
             {isOpen && <div className='header__wrapper header__wrapper-mail'>
                 <p className='header__email'>{email}</p>
-                <Link to="/sign-in" onClick={onSignOut}
+                <Link to="/signin" onClick={onSignOut}
                       className="header__link header__link_mobile header__link_color">Выйти</Link>
             </div>}
             <div className='header__wrapper-logo'>
