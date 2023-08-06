@@ -4,9 +4,6 @@ import {CurrentUserContext} from '../contexts/CurrentUserContext'
 const Card = ({onCardClick, card, onCardLike, onCardDelete}) => {
     const currentUser = React.useContext(CurrentUserContext);
     const isOwn = card.owner === currentUser['_id'];
-    console.log(card.owner, 'card.owner');
-    console.log(currentUser['_id'], 'currentUser[\'_id\']');
-    console.log(isOwn, 'isOwn')
     const isLiked = card.likes.includes(currentUser['_id']);
     const cardLikeButtonClassName = (
         `card__vector ${isLiked && 'card__vector_active'}`
