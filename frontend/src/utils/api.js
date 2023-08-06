@@ -16,6 +16,12 @@ class Api {
             .then(this._checkRes)
     }
 
+    setToken(token) {
+        this._headers = {
+            ...this._headers,
+            authorization: `Bearer ${token}`}
+    }
+
     getUserInfo() {
         const Url = `${this._baseUrl}/users/me`;
         return this._request(Url, {
@@ -85,7 +91,6 @@ class Api {
 export const api = new Api({
     baseUrl: 'https://api.mesto.zvereva.nomoreparties.co',
     headers: {
-        authorization: `Bearer ${localStorage.getItem('jwt')}`,
         'Content-Type': 'application/json'
     }
 });

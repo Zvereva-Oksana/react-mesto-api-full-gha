@@ -9,7 +9,7 @@ const Register = ({addInfoTooltipFalse, addInfoTooltipSucces, setEmail, setPassw
         event.preventDefault();
         userAuth.register(password, email).then(() => {
             addInfoTooltipSucces();
-            navigate('/sign-in');
+            navigate('/signin');
         }).catch(() => addInfoTooltipFalse())
     }
 
@@ -26,7 +26,7 @@ const Register = ({addInfoTooltipFalse, addInfoTooltipSucces, setEmail, setPassw
             password={password}>
             <div className="register__signin">
                 <p className='register__question'>Уже зарегистрированы?</p>
-                <Link to="/sign-in" className="register__login-link">Войти</Link>
+                <Link to="/signin" className="register__login-link">Войти</Link>
             </div>
         </FormRegisterAndLogin>
     )
